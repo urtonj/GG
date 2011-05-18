@@ -109,3 +109,19 @@ footer nav {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 }
+
+a.signup_button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: auto;
+	height: auto;
+	color: #fff;
+	background: #006400;
+	font-size: 150%;
+	font-weight: bold;
+	padding: 20px;
+	margin-right: 40px;
+	float: right;
+}
