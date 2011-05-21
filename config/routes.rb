@@ -1,5 +1,6 @@
 GG::Application.routes.draw do
-  
+  resources :users
+
   match '/home', :to => 'pages#home' 
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
