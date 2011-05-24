@@ -1,18 +1,32 @@
-<h1>GroceryGenie</h1>
-<p>
-Welcome to GroceryGenie. Our goal is to take the hassle out of the grocery
-shopping process and make it easy for you, the consumer, to find deals on the
-products that you buy everyday. 
-</p>
-<p>
-With GroceryGenie, you will be able to:	
-</p>
-
-<ul>
-	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-	<li>Create grocery lists from your browser or smartphone</li>
-	<li>Share lists with other shoppers</li>
-	<li>View sales on the items you add to your list(s)</li>
-	<li>See what specials local merchants are offering</li>
-</ul>
-
+<% if signed_in? %>
+	<table class="front" summary="For signed-in users">
+		<tr>
+			<td class="main">
+				<h1 class="list">Add items below...</h1>
+				<%= render 'shared/list_form' %>
+				<%= render 'shared/feed' %>
+			</td>
+			<td class="sidebar round right">
+				<%= render 'shared/user_info' %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+	<h1>GroceryGenie</h1>
+	<p>
+	Welcome to GroceryGenie. Our goal is to take the hassle out of the grocery
+	shopping process and make it easy for you, the consumer, to find deals on the
+	products that you buy everyday. 
+	</p>
+	<p>
+	With GroceryGenie, you will be able to:	
+	</p>
+	
+	<ul>
+		<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+		<li>Create grocery lists from your browser or smartphone</li>
+		<li>Share lists with other shoppers</li>
+		<li>View sales on the items you add to your list(s)</li>
+		<li>See what specials local merchants are offering</li>
+	</ul>
+<% end %>

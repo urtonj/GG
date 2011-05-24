@@ -3,7 +3,8 @@ GG::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [ :new, :create, :destroy ]
-
+  resources :lists, :only => [ :create, :destroy ] 
+  
   match '/home', :to => 'pages#home' 
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
